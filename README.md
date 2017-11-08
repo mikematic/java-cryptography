@@ -1,4 +1,4 @@
-# JavaCrypto
+# java-cryptography
 Code samples of using standard java libraries to implement various cryptography algorithms.
 
 #### Implemented algorithms
