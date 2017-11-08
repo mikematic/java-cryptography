@@ -1,4 +1,4 @@
-package com.javacrypto;
+package com.javacryptography;
 
 import java.math.BigInteger;
 import java.security.KeyFactory;

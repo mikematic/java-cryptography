@@ -1,4 +1,4 @@
-package com.javacrypto;
+package com.javacryptography;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

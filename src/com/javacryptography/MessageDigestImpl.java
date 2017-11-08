@@ -1,4 +1,4 @@
-package com.javacrypto;
+package com.javacryptography;
 
 import java.security.MessageDigest;
 import java.security.Provider;
