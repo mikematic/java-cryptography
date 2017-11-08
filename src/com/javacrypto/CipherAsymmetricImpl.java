@@ -12,8 +12,10 @@ import javax.crypto.Cipher;
 public class CipherAsymmetricImpl {
 	/*
 	 * Using standard Java libraries to encrypt and decrypt a data using Asymmetric
-	 * key algorithm (Public/Private key pair).
-	 *
+	 * key algorithm (Public/Private key pair). Data encrypted by
+	 * private key can only be decrypted using the public key pair. Also, data
+	 * encrypted by public key can only be decrypted using a private key.
+	 * 
 	 * Note: Asymmetric algorithms (such as RSA) are generally much slower than
 	 * symmetric ones. These algorithms are not designed for efficiently protecting
 	 * large amounts of data. In practice, asymmetric algorithms are used to

@@ -15,16 +15,27 @@ import javax.crypto.SecretKey;
 
 public class CipherSymmetricImpl {
 	/*
-	 * Using standard Java libraries to encrypt and decrypt a data using
-	 * symmetric key algorithm. In other words one secret key is used
-	 * to encrypt as well as decrypt the data. The converse of this implementation
-	 * is asymmetric encryption also known as Public/Private key pair cipher.
+	 * Using standard Java libraries to encrypt and decrypt a data using symmetric
+	 * key algorithm. In other words one secret key is used to encrypt as well as
+	 * decrypt the data. The converse of this implementation is asymmetric
+	 * encryption also known as Public/Private key pair cipher.
 	 * 
-	 * Note: Asymmetric algorithms (such as RSA) are generally much slower than
-	 * symmetric ones. These algorithms are not designed for efficiently protecting
-	 * large amounts of data. In practice, asymmetric algorithms are used to
-	 * exchange smaller secret keys which are used to initialize symmetric
-	 * algorithms.
+	 * Note: Symmetric ciphers are generally much faster than asymmetric ones.
+	 * However, since there is only one key for encryption and decryption it
+	 * requires another cipher to exchange this key in the open (e.g internet).
+	 * Hence, it is very common to see symmetric cipher being used along asymmetric
+	 * cipher in the real world. A good example of this is data transfer between
+	 * client browser and web server over HTTPS. When a client browser first
+	 * connects to a web server over HTTPS, it requests the server for its public
+	 * key. The browser then verifies the public certificate for integrity using its
+	 * CA store. After verification, the browser generates a secret-key that will be
+	 * used to encrypt and decrypt data for that session. The browser encrypts this
+	 * secret key using the public key of the web server and sends it to the web
+	 * server. The webserver uses its private key to decrypt the data and unveil the
+	 * secret-key. The webserver then encrypts the webcontent using this secret key
+	 * and sends it to the browser. All communications after this stage are
+	 * encrypted and decrypted using the secret key.
+	 * 
 	 */
 	public static void main(String[] args) throws Exception {
 		String theText = "abc456";
